@@ -2,12 +2,11 @@
 This is a simple calculator .
 It can perform operations according to priority.
 It print ERROR when you divide a number by zero.
-exp Git :
+ex Git :
 
-...
+\\\
 90/3+50=80
 
 9/0
 ERROR!!!
-
-...
+\\\
