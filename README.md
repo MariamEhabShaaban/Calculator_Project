@@ -13,8 +13,9 @@ ex Git :
 ERROR!!!
 ...
 ## ERROR
-![error](https://github.com/Mariamehab2003/Calculator_Project/assets/99998896/f89e7fe3-1998-41a1-8922-fedd841aafe8)
+![error](https://github.com/Mariamehab2003/Calculator_Project/assets/99998896/8a0c43e5-719d-4f62-8833-d06be8fa3992)
+### Priority and more one digit
 
-### Priority
 
-![priority](https://github.com/Mariamehab2003/Calculator_Project/assets/99998896/2b8093bd-988e-44f8-8717-458e33ecd7c4)
+![more than one digit](https://github.com/Mariamehab2003/Calculator_Project/assets/99998896/08c4606a-0b8a-4bbd-b0d6-4269a397b22c)
+
