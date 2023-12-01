@@ -3,7 +3,7 @@ This is a simple calculator with AVR   microcontroller.
 It handle operands with more than one digit.
 It can perform operations according to priority basic arithmetic operations (+, -, *, /).
 It print ERROR when you divide a number by zero.
-It support fraction (Accurately 3 digits).
+It supports fraction (Accurately 3 digits).
 ex Git :
 
 ...
