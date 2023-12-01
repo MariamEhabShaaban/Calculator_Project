@@ -9,6 +9,7 @@ u8 INPUT [MAXINPUT]={0},Error[]="ERROR!!!!";
 NUMS numbers,rev_numbers,remender;
 operations op,rev_op;
 s32 i=0;
+s32 fraction=0,res_mul1000;
 void CAL_INIT(){
 
 	Keypad_enuInit();
@@ -75,6 +76,7 @@ void CAL_OPERATION(){
 	                 res=num1*num2;
 	             }
 	             else if(oper=='/'){
+
 	                  Pop_op(&pp,&op);
 	                  if(num2==0){
 	                	  LCD_enuSendCommand(0xc0);//////GO TO SECOND LINE IN LCD
@@ -84,7 +86,10 @@ void CAL_OPERATION(){
 	                	  }
 	                	  return;
 	                  }
+	                 res_mul1000=(num1*1000)/num2;
 	                 res=num1/num2;
+	                 fraction=res_mul1000-(res*1000);
+
 	             }
 
 	             Push(res,&numbers);
@@ -110,6 +115,8 @@ void CAL_OPERATION(){
 	       res=num1*num2;
 	        if(P=='/'){
 	           res=num1/num2;
+	           res_mul1000=(num1*1000)/num2;
+	           fraction=res_mul1000-(res*1000);
 	           if(num2==0){
 	        	   LCD_enuSendCommand(0xc0);
 	        for(s32 it=0;Error[it]!='\0';it++){
@@ -172,10 +179,18 @@ void CAL_OUTPUT(){
 	        }
 	 }
 	        Pop(&result, &rev_numbers );
+
 	        LCD_enuSendCommand(0xc0);/////GO TO SECOND LINE IN LCD
 
 
 	        LCD_enuDisplayIntegerNum(result);
+
+
+if(fraction>0)
+
+	        	LCD_enuDisplayChar('.');
+	        	LCD_enuDisplayIntegerNum(fraction);
+
 
 
 
@@ -191,6 +206,8 @@ void Clear_CAL(){
 	 ClearStack_op(&op);
 	 ClearStack_op(&rev_op);
 i=0;
+fraction=0;
+res_mul1000=0;
 
 }
 
