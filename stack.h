@@ -24,11 +24,11 @@ void Push(stackentry, NUMS*);
 void Pop(stackentry*, NUMS*);
 int StackFull(NUMS*);
 int StackEmpty(NUMS*);
-//void StackTop(stackentry* , NUMS* );
+
 int StackSize(NUMS*);
 void ClearStack(NUMS*);
 void TraverseStack(NUMS*, void (*)(stackentry));
-//void Revese_Stack(NUMS *,NUMS*);
+
 
 
 
@@ -37,7 +37,7 @@ void Push_op(u8 , operations *);
 void Pop_op(u8*, operations *);
 int StackEmpty_op(operations *ps);
 char StackTop_op(operations* );
-//void Revese_Stack_op(operations *,operations *);
+
 void ClearStack_op(operations*);
 
 

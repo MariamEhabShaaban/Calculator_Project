@@ -10,26 +10,7 @@ void CreateStack_op(operations *ps)
 {
     ps->top=0;
 }
-/*void Revese_Stack(NUMS *s1,NUMS *s2){
-while(StackEmpty(&s1)){
-	int s1_top;
-	Pop(&s1_top,&s1);
-	Push(s1_top,&s2);
 
-}
-
-}
-
-void Revese_Stack_op(operations *p1,operations *p2){
-	while(StackEmpty(&p1)){
-		u8 p1_top;
-		Pop_op(&p1_top,&p1);
-		Push_op(p1_top,&p2);
-
-
-	}
-
-}*/
 
 void Push(stackentry e, NUMS *ps)
 {
@@ -58,17 +39,13 @@ int StackFull(NUMS *ps)
 
 int StackEmpty_op(operations *ps)
 {
-    return ps->top;
+    return !ps->top;
 }
 int StackEmpty(NUMS *ps)
 {
-    return ps->top;
+    return !ps->top;
 }
-/*void StackTop(stackentry *pe ,NUMS *ps)
-{
 
-    pe=ps->entry[ps->top-1];
-}*/
 
 int StackSize(NUMS *ps)
 {

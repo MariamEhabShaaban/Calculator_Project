@@ -80,8 +80,9 @@ void CAL_OPERATION(){
 	                	  LCD_enuSendCommand(0xc0);//////GO TO SECOND LINE IN LCD
 	                	  for(s32 it=0;Error[it]!='\0';it++){
 	                		  LCD_enuDisplayChar(Error[it]);
-	                		  return;
+
 	                	  }
+	                	  return;
 	                  }
 	                 res=num1/num2;
 	             }
@@ -125,13 +126,13 @@ void CAL_OPERATION(){
 
 	 }
 	 /////REVERSE THE INPUT
-	 while(StackEmpty(&numbers)){
+	 while(!StackEmpty(&numbers)){
 	 	s32 s1_top;
 	 	Pop(&s1_top,&numbers);
 	 	Push(s1_top,&rev_numbers);
 
 	 }
-	 while(StackEmpty_op(&op)){
+	 while(!StackEmpty_op(&op)){
 	 		u8 p1_top;
 	 		Pop_op(&p1_top,&op);
 	 		Push_op(p1_top,&rev_op);
@@ -148,7 +149,7 @@ void CAL_OPERATION(){
 void CAL_OUTPUT(){
 	s32 result;
 
-	 while(StackEmpty_op(&rev_op)){
+	 while(!StackEmpty_op(&rev_op)){
 
 	           s32 res=0;
 	       s32 top_num1;
