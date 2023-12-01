@@ -187,7 +187,7 @@ void CAL_OUTPUT(){
 void Clear_CAL(){
 	 LCD_Clear();
 	 ClearStack(&numbers);
-	 ClearStack(&numbers);
+	 ClearStack(&rev_numbers);
 	 ClearStack_op(&op);
 	 ClearStack_op(&rev_op);
 i=0;
