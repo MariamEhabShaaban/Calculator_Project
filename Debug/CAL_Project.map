@@ -45,7 +45,6 @@ Common symbol       size              file
 rev_op              0x66              ./calculator/cal.o
 op                  0x66              ./calculator/cal.o
 rev_numbers         0x192             ./calculator/cal.o
-res_mul1000         0x4               ./calculator/cal.o
 numbers             0x192             ./calculator/cal.o
 remender            0x192             ./calculator/cal.o
 
@@ -163,7 +162,7 @@ LOAD c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x368c
+.text           0x00000000     0x37c8
  *(.vectors)
  .vectors       0x00000000       0x54 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -278,135 +277,146 @@ LOAD c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib
                 0x00000a94                __fpcmp_parts_f
                 0x00000b46                . = ALIGN (0x2)
  *(.text.*)
+ .text.ERROR    0x00000b46       0x68 ./calculator/cal.o
+                0x00000b46                ERROR
+ .text.check_the_last_operation
+                0x00000bae      0x1a6 ./calculator/cal.o
+                0x00000bae                check_the_last_operation
+ .text.check_the_MulDiv_operation
+                0x00000d54      0x1a2 ./calculator/cal.o
+                0x00000d54                check_the_MulDiv_operation
+ .text.REVERSE_INPUT
+                0x00000ef6       0x78 ./calculator/cal.o
+                0x00000ef6                REVERSE_INPUT
  .text.CAL_INIT
-                0x00000b46       0x36 ./calculator/cal.o
-                0x00000b46                CAL_INIT
+                0x00000f6e       0x36 ./calculator/cal.o
+                0x00000f6e                CAL_INIT
  .text.CAL_INPUT
-                0x00000b7c       0xb4 ./calculator/cal.o
-                0x00000b7c                CAL_INPUT
+                0x00000fa4       0xb8 ./calculator/cal.o
+                0x00000fa4                CAL_INPUT
  .text.CAL_OPERATION
-                0x00000c30      0x4ae ./calculator/cal.o
-                0x00000c30                CAL_OPERATION
+                0x0000105c      0x1a4 ./calculator/cal.o
+                0x0000105c                CAL_OPERATION
  .text.CAL_OUTPUT
-                0x000010de      0x16a ./calculator/cal.o
-                0x000010de                CAL_OUTPUT
+                0x00001200      0x184 ./calculator/cal.o
+                0x00001200                CAL_OUTPUT
  .text.Clear_CAL
-                0x00001248       0x62 ./calculator/cal.o
-                0x00001248                Clear_CAL
+                0x00001384       0x62 ./calculator/cal.o
+                0x00001384                Clear_CAL
  .text.LCD_enuInit
-                0x000012aa      0x418 ./LCD/LCD_prog.o
-                0x000012aa                LCD_enuInit
+                0x000013e6      0x418 ./LCD/LCD_prog.o
+                0x000013e6                LCD_enuInit
  .text.LCD_enuDisplayChar
-                0x000016c2       0x2a ./LCD/LCD_prog.o
-                0x000016c2                LCD_enuDisplayChar
+                0x000017fe       0x2a ./LCD/LCD_prog.o
+                0x000017fe                LCD_enuDisplayChar
  .text.LCD_enuSendCommand
-                0x000016ec       0x2a ./LCD/LCD_prog.o
-                0x000016ec                LCD_enuSendCommand
+                0x00001828       0x2a ./LCD/LCD_prog.o
+                0x00001828                LCD_enuSendCommand
  .text.LCD_enuDisplayIntegerNum
-                0x00001716      0x16e ./LCD/LCD_prog.o
-                0x00001716                LCD_enuDisplayIntegerNum
+                0x00001852      0x16e ./LCD/LCD_prog.o
+                0x00001852                LCD_enuDisplayIntegerNum
  .text.LCD_vidLatch
-                0x00001884      0x7d8 ./LCD/LCD_prog.o
+                0x000019c0      0x7d8 ./LCD/LCD_prog.o
  .text.LCD_invidSendCommend
-                0x0000205c      0x42e ./LCD/LCD_prog.o
+                0x00002198      0x42e ./LCD/LCD_prog.o
  .text.LCD_Clear
-                0x0000248a       0x14 ./LCD/LCD_prog.o
-                0x0000248a                LCD_Clear
+                0x000025c6       0x14 ./LCD/LCD_prog.o
+                0x000025c6                LCD_Clear
  .text.Keypad_enuInit
-                0x0000249e       0xda ./Keypad/KPD_prog.o
-                0x0000249e                Keypad_enuInit
+                0x000025da       0xda ./Keypad/KPD_prog.o
+                0x000025da                Keypad_enuInit
  .text.Keypad_enuGetPressedKey
-                0x00002578      0x308 ./Keypad/KPD_prog.o
-                0x00002578                Keypad_enuGetPressedKey
+                0x000026b4      0x308 ./Keypad/KPD_prog.o
+                0x000026b4                Keypad_enuGetPressedKey
  .text.DIO_enuInit
-                0x00002880       0x56 ./DIO/DIO_prog.o
-                0x00002880                DIO_enuInit
+                0x000029bc       0x56 ./DIO/DIO_prog.o
+                0x000029bc                DIO_enuInit
  .text.DIO_enuSetPortDirection
-                0x000028d6       0x9a ./DIO/DIO_prog.o
-                0x000028d6                DIO_enuSetPortDirection
+                0x00002a12       0x9a ./DIO/DIO_prog.o
+                0x00002a12                DIO_enuSetPortDirection
  .text.DIO_enuSetPortValue
-                0x00002970       0x9a ./DIO/DIO_prog.o
-                0x00002970                DIO_enuSetPortValue
+                0x00002aac       0x9a ./DIO/DIO_prog.o
+                0x00002aac                DIO_enuSetPortValue
  .text.DIO_enuTogPortValue
-                0x00002a0a       0xae ./DIO/DIO_prog.o
-                0x00002a0a                DIO_enuTogPortValue
+                0x00002b46       0xae ./DIO/DIO_prog.o
+                0x00002b46                DIO_enuTogPortValue
  .text.DIO_enuGetPortValue
-                0x00002ab8       0xbe ./DIO/DIO_prog.o
-                0x00002ab8                DIO_enuGetPortValue
+                0x00002bf4       0xbe ./DIO/DIO_prog.o
+                0x00002bf4                DIO_enuGetPortValue
  .text.DIO_enuSetPinDirection
-                0x00002b76      0x1d8 ./DIO/DIO_prog.o
-                0x00002b76                DIO_enuSetPinDirection
+                0x00002cb2      0x1d8 ./DIO/DIO_prog.o
+                0x00002cb2                DIO_enuSetPinDirection
  .text.DIO_enuSetPinValue
-                0x00002d4e      0x1d8 ./DIO/DIO_prog.o
-                0x00002d4e                DIO_enuSetPinValue
+                0x00002e8a      0x1d8 ./DIO/DIO_prog.o
+                0x00002e8a                DIO_enuSetPinValue
  .text.DIO_enuTogPin
-                0x00002f26      0x11c ./DIO/DIO_prog.o
-                0x00002f26                DIO_enuTogPin
+                0x00003062      0x11c ./DIO/DIO_prog.o
+                0x00003062                DIO_enuTogPin
  .text.DIO_enuGetPinValue
-                0x00003042      0x13c ./DIO/DIO_prog.o
-                0x00003042                DIO_enuGetPinValue
- .text.main     0x0000317e       0x12 ./main.o
-                0x0000317e                main
+                0x0000317e      0x13c ./DIO/DIO_prog.o
+                0x0000317e                DIO_enuGetPinValue
+ .text.main     0x000032ba       0x12 ./main.o
+                0x000032ba                main
  .text.CreateStack
-                0x00003190       0x20 ./stack.o
-                0x00003190                CreateStack
+                0x000032cc       0x20 ./stack.o
+                0x000032cc                CreateStack
  .text.CreateStack_op
-                0x000031b0       0x20 ./stack.o
-                0x000031b0                CreateStack_op
- .text.Push     0x000031d0       0x66 ./stack.o
-                0x000031d0                Push
- .text.Push_op  0x00003236       0x42 ./stack.o
-                0x00003236                Push_op
- .text.Pop_op   0x00003278       0x50 ./stack.o
-                0x00003278                Pop_op
- .text.Pop      0x000032c8       0x64 ./stack.o
-                0x000032c8                Pop
+                0x000032ec       0x20 ./stack.o
+                0x000032ec                CreateStack_op
+ .text.Push     0x0000330c       0x66 ./stack.o
+                0x0000330c                Push
+ .text.Push_op  0x00003372       0x42 ./stack.o
+                0x00003372                Push_op
+ .text.Pop_op   0x000033b4       0x50 ./stack.o
+                0x000033b4                Pop_op
+ .text.Pop      0x00003404       0x64 ./stack.o
+                0x00003404                Pop
  .text.StackFull
-                0x0000332c       0x3c ./stack.o
-                0x0000332c                StackFull
+                0x00003468       0x3c ./stack.o
+                0x00003468                StackFull
  .text.StackEmpty_op
-                0x00003368       0x3a ./stack.o
-                0x00003368                StackEmpty_op
+                0x000034a4       0x3a ./stack.o
+                0x000034a4                StackEmpty_op
  .text.StackEmpty
-                0x000033a2       0x3a ./stack.o
-                0x000033a2                StackEmpty
+                0x000034de       0x3a ./stack.o
+                0x000034de                StackEmpty
  .text.StackSize
-                0x000033dc       0x20 ./stack.o
-                0x000033dc                StackSize
+                0x00003518       0x20 ./stack.o
+                0x00003518                StackSize
  .text.ClearStack
-                0x000033fc       0x20 ./stack.o
-                0x000033fc                ClearStack
+                0x00003538       0x20 ./stack.o
+                0x00003538                ClearStack
  .text.ClearStack_op
-                0x0000341c       0x20 ./stack.o
-                0x0000341c                ClearStack_op
+                0x00003558       0x20 ./stack.o
+                0x00003558                ClearStack_op
  .text.TraverseStack
-                0x0000343c       0x76 ./stack.o
-                0x0000343c                TraverseStack
+                0x00003578       0x76 ./stack.o
+                0x00003578                TraverseStack
  .text.StackTop_op
-                0x000034b2       0x34 ./stack.o
-                0x000034b2                StackTop_op
- .text.IsDigit  0x000034e6       0x38 ./stack.o
-                0x000034e6                IsDigit
- .text.IsOp     0x0000351e       0x44 ./stack.o
-                0x0000351e                IsOp
- .text.libgcc   0x00003562       0x3e c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
-                0x00003562                __mulsi3
- .text.libgcc   0x000035a0       0x36 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
-                0x000035a0                __divmodsi4
- .text.libgcc   0x000035d6        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x000035d6        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x000035d6        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x000035d6       0x44 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x000035d6                __udivmodsi4
- .text.libgcc   0x0000361a       0x38 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x0000361a                __prologue_saves__
- .text.libgcc   0x00003652       0x36 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00003652                __epilogue_restores__
-                0x00003688                . = ALIGN (0x2)
+                0x000035ee       0x34 ./stack.o
+                0x000035ee                StackTop_op
+ .text.IsDigit  0x00003622       0x38 ./stack.o
+                0x00003622                IsDigit
+ .text.IsOp     0x0000365a       0x44 ./stack.o
+                0x0000365a                IsOp
+ .text.libgcc   0x0000369e       0x3e c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x0000369e                __mulsi3
+ .text.libgcc   0x000036dc       0x36 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
+                0x000036dc                __divmodsi4
+ .text.libgcc   0x00003712        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00003712        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00003712        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00003712       0x44 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00003712                __udivmodsi4
+ .text.libgcc   0x00003756       0x38 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00003756                __prologue_saves__
+ .text.libgcc   0x0000378e       0x36 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x0000378e                __epilogue_restores__
+                0x000037c4                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00003688        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00003688                exit
-                0x00003688                _exit
+ .fini9         0x000037c4        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x000037c4                exit
+                0x000037c4                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -425,11 +435,11 @@ LOAD c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00003688        0x4 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x000037c4        0x4 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000368c                _etext = .
+                0x000037c8                _etext = .
 
-.data           0x00800060       0x22 load address 0x0000368c
+.data           0x00800060       0x26 load address 0x000037c8
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -462,69 +472,73 @@ LOAD c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib
  *(.data*)
  .data.Error    0x00800068        0xa ./calculator/cal.o
                 0x00800068                Error
+ .data.is_ok    0x00800072        0x4 ./calculator/cal.o
+                0x00800072                is_ok
  *(.rodata)
  *(.rodata*)
  .rodata.C.16.1335
-                0x00800072       0x10 ./Keypad/KPD_prog.o
+                0x00800076       0x10 ./Keypad/KPD_prog.o
  *(.gnu.linkonce.d*)
-                0x00800082                . = ALIGN (0x2)
-                0x00800082                _edata = .
-                0x00800082                PROVIDE (__data_end, .)
+                0x00800086                . = ALIGN (0x2)
+                0x00800086                _edata = .
+                0x00800086                PROVIDE (__data_end, .)
 
-.bss            0x00800082      0x59e
-                0x00800082                PROVIDE (__bss_start, .)
+.bss            0x00800086      0x59e
+                0x00800086                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
- .bss           0x00800082        0x0 ./calculator/cal.o
- .bss           0x00800082        0x0 ./LCD/LCD_prog.o
- .bss           0x00800082        0x0 ./Keypad/KPD_prog.o
- .bss           0x00800082        0x0 ./DIO/DIO_prog.o
- .bss           0x00800082        0x0 ./main.o
- .bss           0x00800082        0x0 ./stack.o
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .bss           0x00800082        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x00800086        0x0 ./calculator/cal.o
+ .bss           0x00800086        0x0 ./LCD/LCD_prog.o
+ .bss           0x00800086        0x0 ./Keypad/KPD_prog.o
+ .bss           0x00800086        0x0 ./DIO/DIO_prog.o
+ .bss           0x00800086        0x0 ./main.o
+ .bss           0x00800086        0x0 ./stack.o
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .bss           0x00800086        0x0 c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
  *(.bss*)
- .bss.INPUT     0x00800082       0x10 ./calculator/cal.o
-                0x00800082                INPUT
- .bss.i         0x00800092        0x4 ./calculator/cal.o
-                0x00800092                i
- .bss.fraction  0x00800096        0x4 ./calculator/cal.o
-                0x00800096                fraction
+ .bss.INPUT     0x00800086       0x10 ./calculator/cal.o
+                0x00800086                INPUT
+ .bss.i         0x00800096        0x4 ./calculator/cal.o
+                0x00800096                i
+ .bss.fraction  0x0080009a        0x4 ./calculator/cal.o
+                0x0080009a                fraction
+ .bss.res_mul1000
+                0x0080009e        0x4 ./calculator/cal.o
+                0x0080009e                res_mul1000
  *(COMMON)
- COMMON         0x0080009a      0x586 ./calculator/cal.o
-                0x0080009a                rev_op
-                0x00800100                op
-                0x00800166                rev_numbers
-                0x008002f8                res_mul1000
-                0x008002fc                numbers
-                0x0080048e                remender
-                0x00800620                PROVIDE (__bss_end, .)
-                0x0000368c                __data_load_start = LOADADDR (.data)
-                0x000036ae                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x008000a2      0x582 ./calculator/cal.o
+                0x008000a2                rev_op
+                0x00800108                op
+                0x0080016e                rev_numbers
+                0x00800300                numbers
+                0x00800492                remender
+                0x00800624                PROVIDE (__bss_end, .)
+                0x000037c8                __data_load_start = LOADADDR (.data)
+                0x000037ee                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800620        0x0
-                0x00800620                PROVIDE (__noinit_start, .)
+.noinit         0x00800624        0x0
+                0x00800624                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800620                PROVIDE (__noinit_end, .)
-                0x00800620                _end = .
-                0x00800620                PROVIDE (__heap_start, .)
+                0x00800624                PROVIDE (__noinit_end, .)
+                0x00800624                _end = .
+                0x00800624                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -542,23 +556,23 @@ LOAD c:/users/repair/downloads/telegram desktop/imt_sdk_win_64/winavr/bin/../lib
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x327c
+.stab           0x00000000     0x3360
  *(.stab)
- .stab          0x00000000      0xb40 ./calculator/cal.o
- .stab          0x00000b40     0x10b0 ./LCD/LCD_prog.o
+ .stab          0x00000000      0xabc ./calculator/cal.o
+ .stab          0x00000abc     0x123c ./LCD/LCD_prog.o
                                0x1248 (size before relaxing)
- .stab          0x00001bf0      0x588 ./Keypad/KPD_prog.o
+ .stab          0x00001cf8      0x588 ./Keypad/KPD_prog.o
                                 0x720 (size before relaxing)
- .stab          0x00002178      0x9c0 ./DIO/DIO_prog.o
+ .stab          0x00002280      0x9c0 ./DIO/DIO_prog.o
                                 0x9cc (size before relaxing)
- .stab          0x00002b38      0x1e0 ./main.o
-                                0x378 (size before relaxing)
- .stab          0x00002d18      0x564 ./stack.o
+ .stab          0x00002c40      0x1bc ./main.o
+                                0x1c8 (size before relaxing)
+ .stab          0x00002dfc      0x564 ./stack.o
                                 0x5e8 (size before relaxing)
 
-.stabstr        0x00000000     0x1313
+.stabstr        0x00000000     0x140c
  *(.stabstr)
- .stabstr       0x00000000     0x1313 ./calculator/cal.o
+ .stabstr       0x00000000     0x140c ./calculator/cal.o
 
 .stab.excl
  *(.stab.excl)

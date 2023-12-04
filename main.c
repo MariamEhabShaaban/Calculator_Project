@@ -6,7 +6,7 @@
 
 #include "LCD/LCD_int.h"
 #include "Keypad/KPD_int.h"
-#include "util/delay.h"
+
 #include "calculator/cal.h"
 
 
